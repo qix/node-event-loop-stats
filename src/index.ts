@@ -8,7 +8,7 @@ function range(count: number, valueFactory: (idx: number) => number = v => v) {
   return Array.from(Array(count), (value, idx) => valueFactory(idx));
 }
 
-export default class EventLoopMonitor {
+export class EventLoopMonitor {
   private startTime: [number, number] = [0, 0];
   private stats: Stats = new Stats({
     buckets: [
